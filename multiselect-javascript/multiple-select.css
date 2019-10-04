@@ -1,0 +1,140 @@
+body {
+	background-color: #e7e5e2;
+}
+
+div.checkbox_select {
+	width: 180px;
+}
+
+.checkbox_select_anchor {
+	display: block;
+	background: white;
+	color: #4a4a4a;
+	cursor: pointer;
+	border: 1px solid #d6d6d6;
+	padding: 5px 5px 5px;
+	position: relative;
+	border-radius: 3px 3px 3px 3px;
+	transition: background 0.3s linear 0s, color 0.3s linear 0s;
+}
+
+.checkbox_select_anchor:after {
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #000000;	
+	content: "";
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.expanded .checkbox_select_anchor:after {
+	border-top: 0;
+	border-bottom: 6px solid #000000;
+}
+
+.checkbox_select_anchor:hover {
+	color: #000000;
+	border: 1px solid #808080;
+	transition: 0.4s;
+	background: white !important;
+}
+
+.expanded .checkbox_select_anchor {
+	background: #ffffff;
+}
+
+div.checkbox_select .select_input {
+	width: 100%;
+	cursor: pointer;
+}
+
+.checkbox_select_dropdown {
+	display: none;
+	background: whitesmoke;
+}
+
+.checkbox_select_dropdown.show {
+	display: block;
+}
+
+.checkbox_select_dropdown ul {
+	max-height: 150px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #999;
+	border-top: 0;
+	border-bottom: 1px solid #999;
+}
+
+.checkbox_select_dropdown ul li {
+	list-style: none;
+	position: relative;
+	align-items: center;
+	color: #666;
+}
+
+.checkbox_select_dropdown ul li label {
+	position: relative;
+	color: #000000;
+	padding: 5px 5px 5px 30px;
+	display: block;
+	cursor: pointer;
+}
+
+.checkbox_select_dropdown ul li label:hover {
+	background: #186ba0;
+	color: white;
+}
+
+.checkbox_select_dropdown ul li input:checked+label {
+	background: #186ba0;
+	color: white;
+	border-radius: 3px 3px 3px 3px;
+	text-shadow: 0px 1px 1px rgba(150, 150, 150, 1);
+}
+
+.checkbox_select_dropdown ul li input {
+	position: absolute;
+	left: 0;
+	margin-top: 7px;
+	z-index: 1;
+	display: inline-block;
+	height: 1.125em;
+	width: 1.125em;
+	line-height: 1.125em;
+	border-radius: 2px;
+    text-align: center;
+}
+
+.checkbox_select_search {
+	width: 180px;
+	background-color: white;
+	padding: 5px 5px 5px;
+	border: 1px solid #797878;
+	border-top: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.not_found {
+	font-family: inherit;
+}
+/* .checkbox_select_submit
+{
+    background: #00A600;
+    color: white;
+    padding: 10px 5px 5px;
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+} */
+.hide {
+	display: none;
+}
